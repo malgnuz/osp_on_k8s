@@ -27,15 +27,15 @@ $ sudo dnf -y install git podman
 3-Install kind
 
 ```
-curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
-chmod +x ./kind
-mv ./kind /bin/kind
+$ curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.17.0/kind-linux-amd64
+$ chmod +x ./kind
+$ mv ./kind /bin/kind
 ```
 
 4-Create the K8s cluster:
 
 ```
-cat <<EOF | kind create cluster --config=-
+$ cat <<EOF | kind create cluster --config=-
 kind: Cluster
 apiVersion: kind.x-k8s.io/v1alpha4
 nodes:
@@ -56,6 +56,6 @@ EOF
 5- Install kubectl
 
 ```
-curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
-install -o root -g root -m 0755 kubectl /bin/kubectl
+$ curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+$ install -o root -g root -m 0755 kubectl /bin/kubectl
 ```
