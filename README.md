@@ -21,7 +21,7 @@ $ sudo reboot
 2-Install the requirements:
 
 ```
-$ sudo dnf -y install git podman
+$ sudo dnf -y install git podman golang make
 ```
 
 3-Install kind
